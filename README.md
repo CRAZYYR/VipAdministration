@@ -5,13 +5,13 @@
 
 ## 主要是JSP
 
-#后端采用Spring+SpringMVC+Mybatis+Mysql
+# 后端采用Spring+SpringMVC+Mybatis+Mysql
 
 --------------------------------
 
-#直接撸代码...
+# 直接撸代码...
 
-##基本目录
+## 基本目录
 
 ![基本目录](http://upload-images.jianshu.io/upload_images/2783497-99120580554fa14f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ##设置项目和模块语言级别是1.8的
@@ -28,7 +28,7 @@
       </plugin>
     </plugins>
 ```
-##首先配置`pom.xml`
+## 首先配置`pom.xml`
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -139,7 +139,7 @@
 
 </project>
 ```
-##配置前端控制器和过滤器
+## 配置前端控制器和过滤器
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
@@ -188,7 +188,7 @@
   </servlet-mapping>
 </web-app>
 ```
-##配置 控制器解析器、控制器适配器和视图解析器
+## 配置 控制器解析器、控制器适配器和视图解析器
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -252,7 +252,7 @@
     </bean>
 </beans>
 ```
-###配置`mybatis`
+### 配置`mybatis`
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
