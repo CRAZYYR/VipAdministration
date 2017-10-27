@@ -14,7 +14,8 @@
 ## 基本目录
 
 ![基本目录](http://upload-images.jianshu.io/upload_images/2783497-99120580554fa14f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-##设置项目和模块语言级别是1.8的
+---------------------------
+## 设置项目和模块语言级别是1.8的
 ```
     <plugins>
       <plugin>
