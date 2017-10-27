@@ -1,0 +1,74 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zs.vip.dao.VipDao">
+    <insert id="insert"  parameterType="com.zs.vip.entity.VIPEntity">
+       INSERT INTO
+        vip_detail(
+id,
+code,
+name,
+sex,
+age,
+qq,
+email,
+address,
+zip,
+remark,
+rank,
+amount
+) VALUES (
+#{id},
+#{code},
+#{name},
+#{sex},
+#{age},
+#{qq},
+#{email},
+#{address},
+#{zip},
+#{remark},
+#{rank},
+#{amount}
+)
+    </insert>
+    <update id="update" parameterType="com.zs.vip.entity.VIPEntity">
+       UPDATE vip_detail SET
+
+      id= #{id},
+code=#{code},
+name=#{name},
+sex=#{sex},
+age=#{age},
+qq=#{qq},
+email=#{email},
+address=#{address},
+zip=#{zip},
+remark=#{remark},
+rannk=#{rank},
+amount=#{amount}
+        WHERE id=#{id}
+    </update>
+
+    <select id="select" resultType="com.zs.vip.entity.VIPEntity">
+        SELECT * FROM  vip_detail WHERE ${key}=#{value}
+    </select>
+
+
+    <select id="selectLike" resultType="com.zs.vip.entity.VIPEntity">
+                 SELECT * FROM  vip_detail
+                 <if test="key !=null">
+                     WHERE code LIKE #{key}
+                     OR name LIKE  #{key}
+                     OR  qq LIKE  #{key}
+                     OR  email LIKE  #{key}
+                     OR  adddress LIKE  #{key}
+                     OR  remark LIKE  #{key}
+                 </if>
+        ORDER BY code
+    </select>
+
+    <select id="isExist" resultType="java.lang.Boolean">
+        SELECT  count(*)>0 FROM  vip_detail WHERE ${key}=#{value}
+    </select>
+</mapper>

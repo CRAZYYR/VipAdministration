@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zs.vip.dao.UserDao">
+    <select id="select"  resultType="com.zs.vip.entity.UserEntity">
+        SELECT  * FROM sys_user WHERE ${key}=#{value}
+    </select>
+    <update id="update" parameterType="com.zs.vip.entity.UserEntity">
+       UPDATE sys_user SET
+        account=#{account},name=#{name},password=#{password} WHERE id=#{id}
+    </update>
+</mapper>
